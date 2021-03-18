@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+
+}
+
+body {
+  font-family: 'GongGothicMedium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	background-color: rgba(223, 242, 247, .5);
+	height: 100%;
+	margin: 0;
+}
+
+span {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.container {
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.chat {
+	height: 300px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	align-items: center;
+} 
+
+::-webkit-input-placeholder { 
+	color: .711 
+}
+ 
+input { 
+	border: 0; 
+	padding: 15px; 
+	margin-left: auto;
+	border-radius: 10px; 
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	height: 90%;
+	width: 100%;
+	background-color: white;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+#bot {
+	margin-left: auto;
+}
+
+.bot {
+	font-family: 'GongGothicMedium',  
+	monospace;
+}
+
+.avatar {
+	height: 25px;
+}
+
+.response {
+	display: flex;
+	align-items: center;
+	margin: 1%;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 980px) {
+  .container {
+		flex-direction: column; 
+		justify-content: flex-start;
+	}
+	.chat {
+		width: 75vw;
+		margin: 10vw;
+	}
+}
+
+.textbox {position: relative;} 
+.textbox label { 
+	position: absolute; 
+	top: 1px; /* input 요소의 border-top 설정값 만큼 */ 
+	left: 1px; /* input 요소의 border-left 설정값 만큼 */ 
+	padding: .8em .5em; /* input 요소의 padding 값 만큼 */ 
+	color: #999; 
+	cursor: text; } 
+	.textbox input[type="text"], 
+	.textbox input[type="password"] { 
+		width: 100%; /* 원하는 너비 설정 */ 
+		height: auto; /* 높이값 초기화 */ 
+		line-height : normal; /* line-height 초기화 */ 
+		padding: .8em .5em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */ 
+		font-family: inherit; /* 폰트 상속 */ 
+		border: 1px solid #999; 
+		border-radius: 0; /* iSO 둥근모서리 제거 */ 
+		outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */ 
+		-webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
+		-moz-appearance: none; appearance: none; }

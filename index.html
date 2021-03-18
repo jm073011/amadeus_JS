@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>signinPage</title>
+  </head>
+  <body>
+    <center><br><br><br>
+    AMADEUS LOGIN
+    <br><br><br>
+
+    ID : <input type="text" placeholder="아이디 입력" id="userid" onkeyup="enterkey()" class="input-text full-width"><br>
+    PASSWORD : <input type="password" placeholder="비밀번호 입력" id="userpw" onkeyup="enterkey()" class="input-text full-width">
+    <input type="button" value="로그인" id="signinButton"><br>
+    <p> </p>
+</center>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    console.log("fighting!");
+    console.log(document); // html 태그 전체를 콘솔에 띄워주자.
+
+    var signinButton = document.getElementById("signinButton") // 버튼을 만들고.
+    signinButton.addEventListener('click', signinFunc) // 'click'이란 id의 버튼을 누르면 signinFunc 함수를 실행.
+
+    function signinFunc () {
+      var userid = document.getElementById("userid").value; // userid 의 값을 받아와 넣음.
+      var userpw = document.getElementById("userpw").value; // userpw 의 값을 받아와 넣음.
+
+
+      if(userid == "amadeus" && userpw == "amadeus") {
+        window.location.href = './amadeus.html';
+      } else {
+        $("p").html("<font color='red'>로그인에 실패하였습니다.<br>아이디와 비밀번호를 다시 한 번 확인하여 주십시오.</font>");
+      }
+
+      
+    }
+    function enterkey() {
+        if (window.event.keyCode == 13) {
+ 
+             // 엔터키가 눌렸을 때 실행할 내용
+             signinFunc();
+        }
+}
+ 
+
+
+  </script>
+
+
+</html>
